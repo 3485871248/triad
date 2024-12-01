@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Triad Config</title>
-    <link rel="icon" href="assets/icon.png">
+    <link rel="icon" href="assets/icon-transparent.png">
     <link rel="stylesheet" href="css/container.css"/>
     <link rel="stylesheet" href="css/elements.css">
 </head>
 <body>
+<script src="js/MobileJump.js"></script>
 <div id="fade"></div>
 
 <div>
-    <img id="icon" src="assets/icon-transparent.png" alt="主播你网太好了图片没加载出来">
-    <img id="title-background" src="https://pic.imgdb.cn/item/673989edd29ded1a8c6536d0.png" alt="主播你网太好了图片没加载出来">
+    <img id="title-background" src="assets/title-background.png" alt="主播你网太好了图片没加载出来">
     <p id="title">𝕿𝖗𝖎𝖆𝖉 𝕮𝖔𝖓𝖋𝖎𝖌</p>
     <p id="hitokoto">-- 一言获取中 --</p>
 </div>
@@ -61,16 +61,32 @@
             <p>国内知名服务器(已陨落)</p>
         </article>
     </div>
-    <article class="server-list" style="margin: 1% auto">
-        <h2>Blocksmc</h2>
-        <p>国外快速红</p>
-    </article>
+    <div class="flex">
+        <article class="server-list">
+            <h2>Blocksmc</h2>
+            <p>国外快速红</p>
+        </article>
+        <article class="server-list">
+            <h2>𝕯𝖔𝖒𝖈𝖊𝖗</h2>
+            <p>王航服务器(无敌神犬服)</p>
+        </article>
+    </div>
+    <div class="flex">
+        <article class="server-list">
+            <h2>KKcraft</h2>
+            <p>Guiwow代言了 知道吗</p>
+        </article>
+        <article class="server-list">
+            <h2>Legit</h2>
+            <p>安全 适用于大部分服务器</p>
+        </article>
+    </div>
 </section>
 
 <section class="info-section">
     <h1 class="info-header">-- 支持的客户端 --</h1>
     <P class="info-text">我们支持的客户端非常多呢！懒的打了捏 ~</P>
-    <p class="info-text">可以到下面的官方店铺查看简介! 喵 ⬇️</p>
+    <p class="info-text">可以到下面的官方店铺查看简介! ⬇️</p>
 </section>
 
 <button class="links" onclick="window.open('https://s-y.lol')">点我前往官方店铺购买 ></button>
@@ -84,9 +100,8 @@
     <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113498369623064&bvid=BV1EGUkY1EuD&cid=26810060377&p=1" class="media"></iframe>
 </div>
 
-<section class="info-section" style="margin-top: 5%">
+<footer id="footer">
     <div class="flex">
-        <img src="assets/owner.png" alt="66主播我的大头也加载不出来" style="height: 5vh">
         <p style="font-size: .8vw">Copyright ©2024 shuye. All rights reserved.</p>
     </div>
     <div class="flex">
@@ -103,9 +118,20 @@
         <p>&</p>
         <a href="https://github.s-y.lol/" class="info-text">My github</a>
     </div>
-</section>
+</footer>
 
+<div id="song-play">
+    <img class="song-icons" src="assets/music.svg" alt="66svg更是加载不出来" onclick="playSong()">
+</div>
+
+<div id="lyrics">
+    <p id="lyrics-txet">歌词加载中...</p>
+</div>
+
+<script src="js/playSong.js"></script>
 <script src="js/hitokoto.js"></script>
-<script src="js/MadeByShuye.js"></script>
+<script>
+    console.log("Made by shuye 有问题/想合作？-> shuye1337@qq.com or +Q3485871248")
+</script>
 </body>
 </html>
