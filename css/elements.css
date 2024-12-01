@@ -26,6 +26,14 @@
     height: 350px
 }
 
+.song-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
 #fade {
     position: fixed;
     top: 0;
@@ -34,60 +42,34 @@
     height: 100%;
     width: 100%;
     background:
-            radial-gradient(
-                    at bottom right,
-                    dodgerblue 0,
-                    dodgerblue 1em,
-                    lightskyblue 1em,
-                    lightskyblue 2em,
-                    deepskyblue 2em,
-                    deepskyblue 3em,
-                    gainsboro 3em,
-                    gainsboro 4em,
-                    lightsteelblue 4em,
-                    lightsteelblue 5em,
-                    deepskyblue 5em,
-                    deepskyblue 6em,
-                    lightskyblue 6em,
-                    lightskyblue 7em,
-                    transparent 7em,
-                    transparent 8em
+            repeating-linear-gradient(
+                    to top left,
+                    beige 0,
+                    beige 2em,
+                    moccasin 2em,
+                    moccasin 4em,
+                    wheat 4em,
+                    wheat 6em
             ),
-            radial-gradient(
-                    at top left,
-                    transparent 0,
-                    transparent 1em,
-                    lightskyblue 1em,
-                    lightskyblue 2em,
-                    deepskyblue 2em,
-                    deepskyblue 3em,
-                    lightsteelblue 3em,
-                    lightsteelblue 4em,
-                    gainsboro 4em,
-                    gainsboro 5em,
-                    deepskyblue 5em,
-                    deepskyblue 6em,
-                    skyblue 6em,
-                    skyblue 7em,
-                    dodgerblue 7em,
-                    dodgerblue 8em,
-                    transparent 8em,
-                    transparent 20em
-            ),
-            radial-gradient(
-                    circle at center bottom,
-                    coral, darkslateblue
-            );
+            repeating-linear-gradient(
+                    to left,
+                    white 0,
+                    white 2em,
+                    wheat 2em,
+                    wheat 4em,
+                    beige 4em,
+                    beige 6em
+            ), white;
 
-    background-blend-mode: overlay;
-    background-size:
-            8em 8em, 8em 8em, cover;
+    background-blend-mode: multiply;
     animation: fade 1s forwards .5s;
 }
 
 @keyframes fade {
     from {opacity: 1}
-    to {opacity: 0}
+    to {opacity: 0;
+        display: none;
+    }
 }
 
 #title-background {
@@ -96,8 +78,7 @@
     width: 70%;
     border-radius: 1cm;
     box-shadow: 0 0 40px #393E46;
-    opacity: 1;
-    filter: blur(3px)
+    filter: blur(1px)
 }
 
 #icon {
@@ -122,9 +103,10 @@
 
 #hitokoto {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2vw;
     font-family: "楷体", sans-serif;
+    text-shadow: 0 0 1vh black;
 }
